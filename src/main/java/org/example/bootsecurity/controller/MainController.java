@@ -21,7 +21,6 @@ public class MainController {
     @GetMapping
     public String index(Model model) {
         model.addAttribute("memoList", memoService.findAll());
-        model.addAttribute("memoForm", new MemoForm());
         return "index";
     }
 
