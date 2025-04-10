@@ -8,10 +8,11 @@
     <title>메모</title>
 </head>
 <body>
-<nav>
-    <form th:method="post" th:action="@{/delete-all}"><button>전체 삭제</button></form>
-</nav>
-<p th:text="${msg}"></p>
-<p th:text="${memoList}"></p>
+    <nav>
+        <form th:method="post" th:action="@{/delete-all}"><button>전체 삭제</button></form>
+        <a th:href="@{/add}">등록</a>
+    </nav>
+    <p th:text="${msg}"></p>
+    <p th:text="${memoList}"></p>
 </body>
 </html>

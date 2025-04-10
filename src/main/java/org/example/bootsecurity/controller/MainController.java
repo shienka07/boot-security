@@ -25,7 +25,13 @@ public class MainController {
         return "index";
     }
 
-    @PostMapping
+    @GetMapping("/add")
+    public String add(Model model) {
+        model.addAttribute("memoForm", new MemoForm());
+        return "add";
+    }
+
+    @PostMapping("/add")
     public String save(MemoForm form) throws Exception {
 //        Memo memo = new Memo(0L, form.getText(), "");
         Memo memo = Memo.fromText(form.getText());
