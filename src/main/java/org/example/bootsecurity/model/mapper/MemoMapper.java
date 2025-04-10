@@ -11,7 +11,7 @@ import java.util.List;
 // MyBatis
 @Mapper
 public interface MemoMapper {
-    @Select("SELECT * FROM memo")
+    @Select("SELECT id, text, created_at AS createdAt FROM memo")
     List<Memo> findAll();
 
     @Insert("INSERT INTO memo (text) VALUES (#{text})")
