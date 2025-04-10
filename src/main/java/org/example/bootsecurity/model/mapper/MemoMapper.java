@@ -6,7 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+// Spring
 @Repository
+// MyBatis
 @Mapper
 public interface MemoMapper {
     @Select("SELECT * FROM memo")

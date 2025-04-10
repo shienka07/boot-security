@@ -1,7 +1,7 @@
 package org.example.bootsecurity.model.domain;
 
 public class MemoForm {
-    String text;
+    private String text;
 
     public String getText() {
         return text;
